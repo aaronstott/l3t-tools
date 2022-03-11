@@ -1,5 +1,5 @@
 # L3T-tools
-Codes for R3B-Si-Tracker (L3T) analysis
+Codes for R3B-Si-Tracker (L3T) analysis - currently setup for 2 detectors
 
 Analysis must be performed in a specific order. This is because L3T outputs raw MIDAS files so first we convert to ROOT trees to perform analysis
 
@@ -29,7 +29,7 @@ side(vector<int>) --> side id of each hit <br />
 mult0[3] --> Strip multiplicity of det0; [0] side0; [1]side1; [2] total <br />
 mult1[3] --> "==================== det1; ==============================" <br />
 th0[3] --> "True hits" Strip multiplicity with condition that coincidenct strips must be adjacent +-5 Det0  <br />
-th1[3] --> "========================================================================================" Det1 <br />
+th1[3] --> same for Det1 <br />
   <br />
 adc --> adc data (energy) of each hit <br />
 timestp_ --> Timestamp of each hit <br />
