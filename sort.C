@@ -35,7 +35,8 @@ void sort()
   int evt = 0;
   vector<pair<long int, int>> sorting;
 
-  TFile *tmpf = new TFile("tempf","RECREATE");
+  TString tmpn; tmpn = "tempf"+to_string(rand()%100);
+  TFile *tmpf = new TFile(tmpn,"RECREATE");
   TTree *temp = tree->CloneTree(0);
 
   temp->Branch("timestp",&time1,"timestp/L");

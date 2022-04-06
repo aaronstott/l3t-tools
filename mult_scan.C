@@ -27,7 +27,7 @@ void mult_scan(){
   TLeaf * det = tree->FindLeaf("det_id");
 
   int window = 1e6;
-  int min_mult = 3, max_mult = 100;
+  int min_mult = 1, max_mult = 500;
 
   TH1D *mult[3];
   mult[0] = new TH1D("mult_ext", "mult_ext", max_mult, 0, max_mult);

@@ -21,6 +21,14 @@ bool gate1D(double value, double min, double max) {
 }
 
 void corr(){
+  cout<<"!==============================================!"<<endl;
+  cout<<"!==============================================!"<<endl;
+  cout<<"!============== L3T Correlations  =============!"<<endl;
+  cout<<"!============== A. Stott - UoYork =============!"<<endl;
+  cout<<"!==============================================!"<<endl;
+  cout<<"!==============================================!"<<endl;
+
+
   TString fname;
   cout<<"Input File Number"<<endl;
   cin>>fname; fname = "../root/R"+fname + "_events.root";
@@ -145,7 +153,7 @@ void corr(){
             pp[det->at(j)]->Fill(y_pos, x_pos);
             if(ext_flag==1){pp_ext[det->at(j)]->Fill(y_pos, x_pos);}
           }
-
+        }
           // Angular reconstruction
           //if(mult0->at(0)==1 && mult0->at(1)==1 && mult1->at(0)==1 && mult1->at(1)==1){
             if(mult0->at(0)>=1 && mult0->at(1)>=1 && mult1->at(0)>=1 && mult1->at(1)>=1){
@@ -163,7 +171,7 @@ void corr(){
             if(ext_flag==1){ext_xz_yz->Fill(atan((x1-x0)/dz)* 180 / PI, atan((y1-y0)/dz)* 180 / PI);}
           }
         }
-      }
+      
 
       if (i % 10000 == 0) cout << setiosflags(ios::fixed) << "Entry " << i << " of " << events->GetEntries() << ", " << 100 * i / events->GetEntries() << "% complete" << "\r" << flush;
     }
